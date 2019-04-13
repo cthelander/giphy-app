@@ -1,7 +1,7 @@
 .App {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 100px 100px 100px;
+    grid-template-columns: 250px 250px 250px;
     background-color: #0d5d6c;
     color: #444;
 }
@@ -12,22 +12,19 @@
     border-radius: 5px;
     padding: 20px;
     font-size: 150%;
-
+    margin: 25px;
 }
 
-.a {
+.searchBox {
     grid-column: 1 / 3;
     grid-row: 1;
 }
-.b {
-    grid-column: 3 ;
-    grid-row: 1 / 3;
-}
-.c {
+.gifBox {
     grid-column: 1 ;
-    grid-row: 2 ;
-}
-.d {
-    grid-column: 2;
     grid-row: 2;
+}
+
+.searchInput {
+  margin: 10px;
+  border-radius: 5px;
 }

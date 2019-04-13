@@ -25,7 +25,8 @@ const App = () => {
     })
     .then(function (response) {
       console.log(response);
-      setGiphyResult(response.data.data[0].url);
+      //setGiphyResult(response.data[0].images.fixed_height.url);
+      setGiphyResult(response.data.data[0].images.fixed_height.url);
     })
     .catch(function (error) {
       console.log(error);
@@ -39,21 +40,23 @@ const App = () => {
 
   return (
     <div className="App">
-			<div className="box a">
+			<div className="box searchBox">
 				<form onSubmit={submitSearch}>
     			<label>
       			Search:
-        		<input onChange={(e) => setSearchTerm(e.target.value)}
+        		<input
+              className="searchInput"
+              onChange={(e) => setSearchTerm(e.target.value)}
        			/>
 					</label>
     			<input type="submit" value="Submit" />
   			</form>
 			</div>
-			<div className="box b">
-        <img alt="wat" src={giphyResult} crossOrigin="use-credentials" />
-      </div>
-			<div className="box c">C</div>
-			<div className="box d">D</div>
+      {giphyResult &&
+			  <div className="box gifBox">
+          <img alt="wat" src={giphyResult} crossOrigin="anonymous"></img>
+        </div>
+      }
     </div>
   );
 };
