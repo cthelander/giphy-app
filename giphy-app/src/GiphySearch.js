@@ -4,7 +4,7 @@ import GifBox from './GifBox';
 
 const giphyApiCall = (searchTerm, setGiphyResult) => {
   const axios = require('axios');
-  const apiKey = 'D5a1UTLCrIM8ui00T5YW85gA8reQdyap';
+  const apiKey = //needs an API key 
 
   axios.defaults.baseURL = 'http://api.giphy.com';
   axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
