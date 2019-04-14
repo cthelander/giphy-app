@@ -1,3 +1,6 @@
+### Giphy React App - Diplays a random gif based on user input. 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
